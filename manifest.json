@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Color Changer",
+    "version": "1.0",
+    "description": "Changes the background color of webpages",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+        "48":"/icons/mode.png",
+        "128":"/icons/color.png"
+    }
+  }
